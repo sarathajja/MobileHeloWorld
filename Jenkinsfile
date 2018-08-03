@@ -6,20 +6,15 @@ pipeline{
         stage('Build'){
 
             steps{
+		     
 	    	echo "Branch related pipeline"
-		echo $BRANCH_NAME
+		echo 'Pulling...' + env.BRANCH_NAME
+		'printenv'
                 checkout scm
-               // bat 'gradlew.bat build'
-            }
+              
         }
 
-   //     stage("Run UI Tests"){
-      //      steps{
-      //          bat 'gradlew.bat connectedAndroidTest'
-     //       }
-    //    }
-
-        stage("Clean up"){
+       stage("Clean up"){
             steps{
                 cleanWs()
             }
