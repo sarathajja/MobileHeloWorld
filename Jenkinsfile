@@ -11,7 +11,7 @@ pipeline{
 		echo 'Pulling...' + env.BRANCH_NAME
 		'printenv'
                 checkout scm
-              
+	    }
         }
 
        stage("Clean up"){
