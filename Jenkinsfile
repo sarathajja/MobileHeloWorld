@@ -9,15 +9,15 @@ pipeline{
 	    	echo "Branch related pipeline"
 		echo $BRANCH_NAME
                 checkout scm
-                bat 'gradlew.bat build'
+               // bat 'gradlew.bat build'
             }
         }
 
-        stage("Run UI Tests"){
-            steps{
-                bat 'gradlew.bat connectedAndroidTest'
-            }
-        }
+   //     stage("Run UI Tests"){
+      //      steps{
+      //          bat 'gradlew.bat connectedAndroidTest'
+     //       }
+    //    }
 
         stage("Clean up"){
             steps{
