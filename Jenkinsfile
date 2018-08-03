@@ -9,7 +9,7 @@ pipeline{
 		     
 	    	echo "Branch related pipeline"
 		echo 'Pulling...' + env.BRANCH_NAME
-		'printenv'
+		
                 checkout scm
 	    }
         }
