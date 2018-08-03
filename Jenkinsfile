@@ -7,6 +7,7 @@ pipeline{
 
             steps{
 	    	echo "Branch related pipeline"
+		echo $BRANCH_NAME
                 checkout scm
                 bat 'gradlew.bat build'
             }
