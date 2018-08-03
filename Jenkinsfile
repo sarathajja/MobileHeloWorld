@@ -6,6 +6,7 @@ pipeline{
         stage('Build'){
             
             steps{
+                echo "Master branch name"
                 checkout scm
                 bat 'gradlew.bat build'
             }
