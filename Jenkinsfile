@@ -16,13 +16,7 @@ pipeline{
 
        stage("Clean up"){
             steps{
-		    Script{
-			bat 'set > env.txt' 
-			for (String i : readFile('env.txt').split("\r?\n")) {
-  			println i
-}	
-		    }
-                cleanWs()
+		    cleanWs()
             }
         }
     }
